@@ -1,5 +1,7 @@
 version: "3.9"
 services:
+  # based on https://github.com/influxdata/sandbox/blob/master/docker-compose.yml
+  # Note that we need to use tags that are built for architecture linux/arm/v7
   influxdb:
     # Full tag list: https://hub.docker.com/r/library/influxdb/tags/
     image: influxdb:1.8
@@ -70,3 +72,5 @@ volumes:
   influxdb-data:
   chronograf-data:
   telegraf-config:
+  kapacitor-data:
+  kapacitor-config:
