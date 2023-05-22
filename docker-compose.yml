@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  influxdb:
+    image: influxdb:1.8.9
+    container_name: influxdb
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+      - "8090:8090"
+      - "2003:2003"
+
+    volumes:
+      - influxdb-data:/var/lib/influxdb
+
+volumes:
+  influxdb-data:
